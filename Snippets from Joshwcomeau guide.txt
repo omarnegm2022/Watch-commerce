@@ -1,0 +1,57 @@
+From https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+
+1- CSS is comprised of many different layout algorithms, known officially as “layout modes”.
+2- The default layout mode is Flow layout:
+Headings and paragraphs stack vertically as blocks.
+3- Each layout algorithm is designed to solve a specific problem. 
+4- Flexbox is all about arranging a group of items in a row or column
+	Flexbox is all about flexibility.
+_____________________________
+Flex direction
+* By default, items will stack side-by-side in a row
+* In Flexbox, everything is based on the primary axis. The algorithm doesn't care about vertical/horizontal, or even rows/columns.
+* In Flexbox, we decide whether the primary axis runs horizontally or vertically. This is the root that all Flexbox calculations are pegged to.
+
+Alignment
+* we don't generally think in terms of aligning a single child. Instead, it's all about the distribution of the group.
+* With align-items, we have some of the same options as justify-content:
+	flex-start, center, and flex-end
+* {
+justify — to position something along the primary axis.
+align — to position something along the cross axis.
+content — a group of “stuff” that can be distributed.
+items — single items that can be positioned individually.
+}
+
+*** There is no justify-self, at least in Flexbox, but implemented in Grid layout mode.
+* What about align-content? Actually, this does exist within Flexbox! We'll cover it a little later on, when we talk about the flex-wrap property.
+________________________________
+Hypothetical size
+* in Flow layout, width is a hard constraint. In Flexbox, however, it's more of a suggestion than a hard constraint.
+* a core part of the Flexbox philosophy. Things are fluid and flexible and can adjust to the constraints of the world.
+=============================================================
+
+From https://www.joshwcomeau.com/css/interactive-guide-to-grid/
+1- we can use it to build complex layouts that fluidly adapt based on a number of constraints.
+2- With CSS Grid, a single DOM node is sub-divided into rows and columns.
+3- Unlike Table layout, CSS Grid lets us manage the layout entirely from within CSS. We can slice up the container however we wish
+____________________________
+Grid flow
+
+* the grid parent is still using Flow layout, and block elements in Flow layout grow vertically to contain their content. Only the children are arranged using Grid layout.
+
+* By passing two values to grid-template-columns, telling the CSS Grid algorithm to slice the element up into two columns.
+
+* fr stands for “fraction”, a unit of space
+The fr unit brings Flexbox-style flexibility to CSS Grid. Percentages and <length> values create hard constraints
+fr-based columns are flexible, and so the column won't shrink below its minimum content size, even if that means breaking the proportions.
+
+<--percentages are calculated using the total grid area. 
+-->The fr unit, by contrast, is calculated based on the extra space. 
+
+* The grid algorithm spawns new rows as-needed to ensure that every child has its own grid cell.
+in situations where we have a variable number of items (eg. a photo grid), we want the grid to expand automatically.
+
+** By defining both grid-template-rows and grid-template-columns, we've created an explicit grid. This is perfect for building page layouts, like the “Holy Grail”{This was the name given to the most common layout in the days of the early web}
+
+* The repeat function will do the copy/pasting for us. We're saying we want 7 columns that are each 1fr wide.

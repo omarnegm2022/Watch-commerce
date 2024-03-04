@@ -1,0 +1,133 @@
+<!--    
+    Student name: Omar Saeed Ali Ahmed Negm
+    Section: 4
+    Student no.: 83 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Semantic elements:
+header
+footer
+aside
+main
+article
+nav
+section
+details 
+-->
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch-commerce</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+/><!--for imported icons from www.fontawesome.com-->
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+
+<body>
+    <!-- element.classname or  element#id or anycombination>>hitting enter you get the tag with class(es)/id-->
+    <main></main>
+    <header class="navbar-container"><!--Header Section:-->
+        <section class="navLeft">
+            
+            <div id="logo">
+                <a href="index.html">
+                    <img id="logo_img" src="images/logo.png" alt="logo.png">
+                </a>
+            </div><!--End of .navToo-left-container -->
+        </section>
+            <nav class="navMiddle">
+                <ul class = "nav-menu">
+                    <li> <a class = "a-links" href="#">Today's deals</a> </li>
+                    <li> <a class = "a-links" href="#">Your wishlist</a> </li>
+                    <li> <a class = "a-links" href="#">Sell products</a> </li>
+                </ul> 
+            </nav>
+
+            <span class="navRight">
+                <input type="text" placeholder="Search..." class="search-input" />
+                <button class="fa-solid fa-magnifying-glass" id="search-icon"></button><!--Alternatively:
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i> -->
+                
+            </span><!-- End of  .navRight-container-->
+            <button class="fa-solid fa-bars" id="hamburger-icon"></button>
+            <aside class="hamburger-menu hidden" id="menu">
+                <ul class = "mobile-menu ">
+                    <li> <a class = "a-links" href="#">Today's deals</a> </li>
+                    <li> <a class = "a-links" href="#">Your wishlist</a> </li>
+                    <li> <a class = "a-links" href="#">Sell products</a> </li>
+                </ul>
+            </aside>
+    </header> 
+<div class="slider">
+    <section class="slider-container">
+        <!--How to import variables from js file, instead of manually defining the items like this?
+        maybe we can use foreach there in the file itself? embedding the html in it  -->
+<!--1st  --><div class="item">
+            <img src="images/products/71G3W5z0F2L._AC_SX679_.jpg" alt="" class="itm-img">
+            <h1 class="item-name" >CRRJU Stainless Steel Watch</h1>
+            <h3 class="item-price">$220</h3>
+        </div>
+<!--2nd  --><div class="item">
+            <img src="images/products/71Meq7sFVqL._AC_SY535_.jpg" alt="" class="itm-img">
+            <h1 class="item-name" >GOLDEN HOUR Mens Watch</h1>
+            <h3 class="item-price">$140</h3>
+        </div>
+<!--3rd  --><div class="item">
+            <img src="images/products/81dI08mZslL._AC_SY741_.jpg" alt="" class="itm-img">
+            <h1 class="item-name" >Bulova Men's Icon High Precision Quartz Chronograph Watch</h1>
+            <h3 class="item-price">$170</h3>
+        </div>
+<!--4th --><div class="item">
+            <img src="images/products/61VFHFIf77L._AC_SX679_.jpg" alt="" class="itm-img">
+            <h1 class="item-name" >Aeac SmartWatch</h1>
+            <h3 class="item-price">$100</h3>
+        </div>
+<!--5th  --><div class="item">
+            <img src="images/products/7175YjUMF+L._AC_SX679_.jpg" alt="" class="itm-img">
+            <h1 class="item-name" >Timex Metropolitan S Smartwatch</h1>
+            <h3 class="item-price">$200</h3>
+        </div>
+<!--6th  --><div class="item">
+            <img src="images/products/61ueYKWLNqL._AC_SL1500_.jpg" alt="" class="itm-img">
+            <h1 class="item-name" >Amazfit Bip 5 SmartWatch</h1>
+            <h3 class="item-price">$270</h3>
+        </div>
+
+    </section>
+    <footer class="slider-control">
+        <ol class="slides">
+            <li id="slide-1">page 1</li>
+            <li id="slide-2">page 2</li>
+        </ol>
+    
+    </footer>
+</div>
+    <footer class="Footer">
+        <section class="social">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        </section>
+        <section class="important">
+            <a href="about.html">About us</a>
+            <a href="#" id="cnt">Contact</i></a>
+            <a href="about.html">Privacy Policy</a>
+
+        </section>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>

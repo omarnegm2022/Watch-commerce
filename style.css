@@ -1,0 +1,293 @@
+/*   
+    Student name: Omar Saeed Ali Ahmed Negm
+    Section: 4
+    Student no.: 83 
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* custom properties: */
+:root{/*global variables*/
+    --prim-color:blue;  /*theme color of my web page*/
+    --second-color:white;
+    --extra-color-:lightgreen;
+}
+
+*{
+    box-sizing: border-box; /*means margin and padding contribute in the element actual size, no extra size*/
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-family: 'Open Sans';/*That imported in the first line above*/
+    color:black;/*implicitly, the font color*/
+}
+
+/*classes:
+a-links
+navBottom
+navTop
+*/
+.a-links{
+    text-decoration: none
+    
+}
+.a-links:hover{
+    color: var(--extra-color-);
+}
+
+
+.nav-menu{
+    list-style: none;
+    
+}
+#search-icon{
+    margin: 5px;
+}
+/*  */
+.navbar-container {
+    /* position: relative;  */
+    /*The parent under which comes the next sections of the page*/
+    background-color:var(--prim-color);
+    position: fixed;
+    display: flex;
+    flex-direction: row;/*The default direction*/
+    justify-content: space-between;
+    align-items: center; /*much better than baseline*/
+    width: 100%;
+    /* max-width: 1440px; */
+    margin: 0 auto;/*  horizontal margin is auto sized. */
+    height:auto;    /*automatically adjusts an element's height based on its content.*/
+
+  }
+.navMiddle ul{
+    display: flex;
+    align-items: center;
+    /* margin-right: 100px; */
+}
+.navMiddle{
+    flex-basis:1;
+    /* margin-left: 20px; */
+
+}
+.navMiddle li{
+    margin: 0 15px;
+    font-weight:bold;
+}
+
+/*  */
+
+/* elements:
+nav
+div
+img
+i
+h3
+[header
+footer
+aside
+main
+article 
+nav
+section     
+details] */
+article{
+    margin: 5px 0;
+    line-height: 1.75;
+}
+/*
+ids:
+logo_img
+
+*/
+
+#logo_img{
+    margin: 5px;
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+}
+
+.navRight{
+    display: flex;
+    align-items: center;
+    /* border: 1.5px white solid; */
+    background-color: lightgrey;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+.navRight #search-icon{
+    color: black;
+    cursor: pointer;
+    border-style: none;
+    padding-right: 10px;
+}
+.navRight .search-input{
+    padding-left: 3px;
+    border: none;
+    outline: none;  /*So that when you click on it, no border appears*/
+}
+
+ #hamburger-icon{
+    display: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+
+}
+
+@media (max-width: 768px){/*a media query to show/hide the hamburger icon*/
+    #hamburger-icon {
+      display: block;
+      background-color: lightgrey;
+      padding: 3px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin: 0 15px;
+
+    }
+    
+    /* .search-input{
+        display: none;
+    } */
+    .navMiddle{
+        display: none;
+    }
+}
+.no-scroll {
+    overflow: hidden;
+  }
+
+.hamburger-menu {
+    position: fixed;
+    z-index: 10;
+    top: 85px;
+    right: 0;
+    background-color: white;
+    color: black;
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+    border-color: lightgrey;
+    border-style: solid;
+    list-style: none;
+    /* border-top: none; */
+    margin: 0;
+    transition: all 0.3s;   /*any duration to make smooth transition*/
+  }
+  .hidden {/*to hide the side bar*/
+    transform: translateX(100%);
+  }
+/*-----------------------*/
+.privacy{
+    margin: 20px;
+}
+.About{
+    margin: 10px;
+    width: 50%;
+}
+/*  */
+.slider{
+    position: relative;
+    z-index: -1;
+
+    top: 100px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    
+}
+.slider-container{
+    display: flex;
+    width: 200vw;
+    justify-content: space-evenly;
+}
+.item{
+    width: 35vw;
+}
+.itm-img{
+    width: 100px;
+    /* height: 100px; */
+    width: 100px; 
+}
+.slider-control{
+    margin: 15px;
+}
+.slides {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+.slides li{
+    padding: 5px;
+}
+/*  */
+.Footer{
+    background-color: var(--prim-color);
+    position: fixed;/*So that its padding doesn't effect*/
+    display: flex;
+    bottom: 0px;
+    width: 100%;
+    /* flex-direction: column; */
+    /* height: 100%; */
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+    /* margin: 30px; */
+    
+ }
+.Footer .important{
+    display: flex;
+    justify-content: space-around;
+}
+.Footer a{
+    padding: 3px;
+    font-size: small;
+    color: white;
+}
+.Footer .social i{
+    color: white;
+}
+/**/
+
+
+.search-results {
+    color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.search-result {
+    z-index: 100;
+
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 25px 25px;
+    grid-template-areas:
+        "img name"
+        "img price";
+}
+
+.search-result img {
+    grid-area: img;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.active-search {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
